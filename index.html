@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />  
+    <style>
+          body{
+              background: linear-gradient(to right,#58555A,#7F7F7F,#58555A);
+          }
+
+
+
+          .bg{
+
+
+              background-image: url(images/theatre.jpg);
+              background-size: cover;
+              background-position: center;
+          }
+    </style>
+
+</head>
+<body>
+
+<div class="container w-75 bg-dark mt-5 rounded shadow animate__animated animate__fadeInDown">
+
+    <div class="row align-items-lg-stretch">
+        <div class="col bg d-none d-lg-block rounded">
+           
+
+        
+        </div>
+        <div class="col ">
+            <!-- contenido  -->
+
+            <div class="text-end">
+                <img src="images/logo.jpeg" width="48px" alt="">
+            </div>
+            <h2 class="fw-bold text-center py-5 text-light"> Bienvenido</h2>
+            <!-- aqui empieza mi login -->
+
+            <form action="login.php" method="post">
+                <!-- inputs -->
+                <div class="mb-4">
+                    <label for="email" class="form-label text-light">Correo electronico</label>
+                    <input type="email" class="form-control" name="email" id="">
+                </div>
+                <div class="mb-4">
+
+                    <label for="password" class="form-label text-light">Contraseña</label>
+                    <input type="password" class="form-control" name="psswd" id="">
+
+                </div>
+                <div class="mb-4 form-check">
+                    <input type="checkbox" name="connected" class="form-check-input">
+                    <label for="connected" class="form-check-label text-light"> Mantener sesion activa</label>
+                </div>
+                 
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Inciar sesion</button>
+                </div>
+
+                <div class="my-3 ">
+                    <span class="text-light"> No tienes cuenta?<br> <a href="crearCuenta.html" class="text-light">Registrate aqui</a></span>
+                    <br>
+                    <span> <a href="#" class="text-success"> Recuperar contraseña</a></span>
+                </div>
+
+                  <!-- login con redes -->
+
+                  <div class="container w-100 my-5">
+                      <div class="row text-center">
+                          <div class="col-12">Iniciar sesion</div>
+                      </div>
+                      <div class="row">
+                          <div class="col">
+                              <button class="btn btn-outline-light w-100 my-1">
+                              <div class="row align-items-center">
+                                  <div class="col-2">
+                                      <img src="images/facebook.png" width="30px" alt="">
+                            
+                                  </div>
+                                  <div class="col-10">
+                                      Facebook
+                                  </div>
+                                  
+                                  
+                              </div>
+                          </button>
+                        </div>
+                          <div class="col">
+
+
+                            <button class="btn btn-outline-danger w-100 my-1">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="images/google.png" width="30px" alt="">
+                              
+                                    </div>
+                                    <div class="col-10">
+                                        Google
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </button>
+
+
+
+                              
+                          </div>
+                      </div>
+
+ 
+
+                  </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+   var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null,    // optional scroll container selector, otherwise use window,
+    resetAnimation: true,     // reset animation on end (default is true)
+  }
+);
+wow.init();
+
+</script>
+    
+</body>
+</html>
