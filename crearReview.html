@@ -63,7 +63,7 @@
 </div>
 <!-- contenido  -->
 <div class="container my-5 d-grid gap-5">
-    <form action="procedimientoCrearReview.php" method="post">
+    <form action="procedimientoCrearReview.php" method="post" enctype="multipart/form-data">
 
         <br>
         <div class="mb-3">
@@ -96,15 +96,15 @@
           <br>
 
           <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupFile01">Sube una foto de la pelicula</label>
-            <input type="file" class="form-control" id="inputGroupFile01" name="foto">
+            <input type="file" class="form-control-file" name="foto">
+
           </div>
 
     
 
        
 
-        <button type="submit" class="btn btn-primary">Subir</button>
+        <button type="submit" class="btn btn-primary" name="guardar">Subir</button>
       </form>
 </div>
 

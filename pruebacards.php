@@ -73,45 +73,34 @@ $con=mysqli_connect('localhost','root','');
 mysqli_select_db($con,'dbmovieenjoyers');
 
 
-$s = "select tbreviews.foto,tbdirectores.nombreDirector,tbreviews.review,tbpeliculas.fechaEstreno,tbpeliculas.nombrePelicula,tbActores.nombreActor from tbreviews 
+$s = "select imagenes.imagen,tbdirectores.nombreDirector,tbreviews.review,tbpeliculas.fechaEstreno,tbpeliculas.nombrePelicula,tbActores.nombreActor from tbreviews 
 inner JOIN tbpeliculas on tbreviews.idtitulo = tbpeliculas.id
 INNER JOIN tbdirectores ON tbreviews.idDirector = tbdirectores.id
-inner join tbactores on tbreviews.idActor= tbactores.id";
+inner join tbactores on tbreviews.idActor= tbactores.id
+inner join imagenes on tbreviews.idimagen=imagenes.id";
 
 $result= mysqli_query($con,$s);
 
 
 
 
-while($row = $result->fetch_assoc()) {
-  // echo $row['nombre'];
-  
-  //   echo $row['fechaEstreno'];
-
-  ?>
-  <!-- aqui adentro va la card -->
-  <div class="card align-middle" style="width: 18rem;">
+while($row=mysqli_fetch_assoc($result)){
+    ?>
+     <div class="card align-middle" style="width: 20px;">
   <div class="card-body">
+  <img width="200px" height="200px" src="data:image/png;base64, <?php echo base64_encode( $row['imagen']); ?>" alt="" >
     <h5 class="card-title">Titulo de pelicula: <?php echo $row['nombrePelicula'] ?></h5>
     <h6 class="card-subtitle mb-2 text-muted"> Director: <?php echo $row['nombreDirector'] ?> </h6>
     <h6 class="card-subtitle mb-2 text-muted"> Protagonista: <?php echo $row['nombreActor'] ?> </h6>
-
     <p class="card-text"> Review: <?php echo $row['review'] ?> </p>
+    <p class="card-text"> Fecha estreno: <?php echo $row['fechaEstreno'] ?> </p>
+
     
   </div>
 </div>
-
   
-
-
-
-<?php
-
-  
+ <?php
 }
-
-
-
 
 
 
