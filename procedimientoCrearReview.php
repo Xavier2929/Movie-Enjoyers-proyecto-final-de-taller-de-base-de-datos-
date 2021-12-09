@@ -26,9 +26,6 @@ mysqli_select_db($con,'dbmovieenjoyers');
 
 
  $procedure = "CALL insert_review('$titulo','$fechaEstreno','$director','$actor','$review','$binariosImagen','$nombreArchivo','$tamanoArchivo');";
-//   $procedure = "CALL insert_pelicula2('$titulo','$fechaEstreno')";
-
-
 
  $result = mysqli_query($con,$procedure);
 
