@@ -5,3 +5,5 @@ En este proyecto utilice tecnologicas como, html, css, javascript, php y mysql.
 La funcion de esta pagina es que se puedan crear usuarios y estos puedan ver y escribir reviews de peliculas que hayan visto.
 
 07-12-2021, ya muestra las imagenes en los reviews, ahora me falta que un administrador haga la preparacion de la pelicula 
+
+12-12-2021 se agrego la opcion de privilegios de admin y usuario, al igual que el completador de informacion en el crear review 
