@@ -68,7 +68,7 @@
         <br>
         <div class="mb-3">
           <label for="text" class="form-label">Titulo de pelicula</label>
-          <input type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp" name="titulo">
+          <input type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp" name="titulo" list="listaPeliculas">
         </div>
 
         <div class="mb-2">
@@ -79,12 +79,12 @@
 
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Director</label>
-          <input type="text" class="form-control" id="" name="director">
+          <input type="text" class="form-control" id="" name="director" list="listaDirectores">
         </div>
 
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Protagonista (nombre de actor)</label>
-            <input type="text" class="form-control" id="" name="actor">
+            <input type="text" class="form-control" id="" name="actor" list="listaActores">
          </div>
 
 
@@ -106,6 +106,75 @@
 
         <button type="submit" class="btn btn-primary" name="guardar">Subir</button>
       </form>
+      <datalist id="listaDirectores"> 
+          
+          <?php
+          
+          $con=mysqli_connect('localhost','root','');
+          mysqli_select_db($con,'dbmovieenjoyers');
+          $s = "select nombreDirector from tbdirectores";
+          $result= mysqli_query($con,$s);
+  
+          while($row=mysqli_fetch_assoc($result)){
+              ?>
+              
+              <option value="<?php echo $row['nombreDirector'] ?>"></option>
+            
+           <?php
+          }
+  
+          
+          ?>
+
+  
+          </datalist>
+          <datalist id="listaActores"> 
+          
+          <?php
+          
+          $con=mysqli_connect('localhost','root','');
+          mysqli_select_db($con,'dbmovieenjoyers');
+          $s = "select nombreActor from tbActores";
+          $result= mysqli_query($con,$s);
+  
+          while($row=mysqli_fetch_assoc($result)){
+              ?>
+              
+              <option value="<?php echo $row['nombreActor'] ?>"></option>
+            
+           <?php
+          }
+  
+          
+          ?>
+         
+  
+          </datalist>
+          <datalist id="listaPeliculas"> 
+          
+          <?php
+          
+          $con=mysqli_connect('localhost','root','');
+          mysqli_select_db($con,'dbmovieenjoyers');
+          $s = "select nombrePelicula from tbPeliculas";
+          $result= mysqli_query($con,$s);
+  
+          while($row=mysqli_fetch_assoc($result)){
+              ?>
+              
+              <option value="<?php echo $row['nombrePelicula'] ?>"></option>
+            
+           <?php
+          }
+  
+          
+          ?>
+         
+  
+          </datalist>
+  
+  
+
 </div>
 
 

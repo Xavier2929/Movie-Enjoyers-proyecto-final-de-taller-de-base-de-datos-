@@ -41,11 +41,10 @@
         <div class="collapse navbar-collapse font-monospace fw-bold " id="navbarNav">
             <div class="mx-auto"></div>
             <ul class="navbar-nav ">
-                <li class="nav-item"><a href="inicio.html" class="nav-link  fs-5">Home</a></li>
+                <li class="nav-item"><a href="paginaX.html" class="nav-link  fs-5">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link  fs-5">Sobre Nosotros</a></li>
-                <li class="nav-item"><a href="pruebacards.php" class="nav-link  fs-5">Ver Reviews</a></li>
+                <li class="nav-item"><a href="#" class="nav-link  fs-5">Ver Reviews</a></li>
               
-                     <li class="nav-item"><a href="crearReview.php" class="nav-link fs-5">Escribe una review</a></li>
                  
             </ul>
         </div>

@@ -22,13 +22,17 @@ if($num==1){
    $query="select tipoUsuario from tbusuarios where correoElectronico='$email' ";
    $res=mysqli_query($con,$query);
    $row = mysqli_fetch_array($res);
+    
    
    
    if($row['tipoUsuario']=='admin'){
+      $_SESSION['tipo']='admin';
       header('location:inicio.html');
+      
    }
    else{
-      echo $row;
+      $_SESSION['tipo']='admin';
+     
       header('location:paginaX.html');
    }   
 }else{
